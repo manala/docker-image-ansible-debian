@@ -50,8 +50,8 @@ push: push@jessie push@wheezy
 
 ## Push - Jessie
 push@jessie:
-	docker push manala/build-debian:jessie
+	docker push manala/ansible-debian:jessie
 
 ## Push - Wheezy
 push@wheezy:
-	docker push manala/build-debian:wheezy
+	docker push manala/ansible-debian:wheezy

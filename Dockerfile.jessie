@@ -21,6 +21,7 @@ Pin-Priority: 600\n" > /etc/apt/preferences.d/backports \
     && apt-get -y --no-install-recommends install \
         unzip \
         curl \
+        make \
         python-pip \
     && rm -rf /var/lib/apt/lists/*
 

@@ -1,0 +1,31 @@
+FROM debian:jessie
+
+MAINTAINER Manala <contact@manala.io>
+
+# Set the env variable DEBIAN_FRONTEND to noninteractive
+ENV DEBIAN_FRONTEND noninteractive
+
+WORKDIR /tmp
+
+COPY scripts scripts
+
+RUN sh scripts/apt.sh \
+    && sh scripts/ansible.sh
+
+RUN echo "deb http://httpredir.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/backports.list \
+    && echo "Package: *\n\
+Pin: release a=jessie-backports\n\
+Pin-Priority: 600\n" > /etc/apt/preferences.d/backports \
+    && apt-get update \
+    && apt-get -y upgrade \
+    && apt-get -y --no-install-recommends install \
+        unzip \
+        curl \
+        python-pip \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip install ansible-lint
+
+RUN sh scripts/clean.sh
+
+WORKDIR /srv/app

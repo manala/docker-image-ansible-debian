@@ -26,6 +26,7 @@ Pin-Priority: 600\n" > /etc/apt/preferences.d/backports \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install ansible-lint
+RUN curl -L https://github.com/aelsabbahy/goss/releases/download/v0.1.6/goss-linux-amd64 > /usr/local/bin/goss && chmod +rx /usr/local/bin/goss
 
 RUN sh scripts/clean.sh
 

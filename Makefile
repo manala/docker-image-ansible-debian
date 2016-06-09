@@ -22,6 +22,10 @@ help:
 	} \
 	{ lastLine = $$0 }' $(MAKEFILE_LIST)
 
+#########
+# Build #
+#########
+
 ## Build
 build: build@jessie build@wheezy
 
@@ -31,6 +35,7 @@ build@jessie:
 		--pull \
 		--rm \
 		--force-rm \
+		--no-cache \
 		--tag manala/ansible-debian:jessie \
 		--file Dockerfile.jessie \
 		.
@@ -41,9 +46,36 @@ build@wheezy:
 		--pull \
 		--rm \
 		--force-rm \
+		--no-cache \
 		--tag manala/ansible-debian:wheezy \
 		--file Dockerfile.wheezy \
 		.
+
+########
+# Test #
+########
+
+## Test - Jessie
+test@jessie:
+	docker run \
+		--rm \
+		--volume `pwd`:/srv \
+		--tty -i \
+		manala/ansible-debian:jessie \
+		/bin/bash
+
+## Test - Wheezy
+test@wheezy:
+	docker run \
+		--rm \
+		--volume `pwd`:/srv \
+		--tty -i \
+		manala/ansible-debian:wheezy \
+		/bin/bash
+
+########
+# Push #
+########
 
 ## Push
 push: push@jessie push@wheezy

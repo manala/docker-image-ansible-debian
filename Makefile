@@ -22,23 +22,34 @@ help:
 	} \
 	{ lastLine = $$0 }' $(MAKEFILE_LIST)
 
+#######
+# Dev #
+#######
+
+## Dev - Wheezy
+dev@wheezy:
+	docker run \
+		--rm \
+		--volume `pwd`:/srv \
+		--tty --interactive \
+		manala/ansible-debian:wheezy \
+		/bin/bash
+
+## Dev - Jessie
+dev@jessie:
+	docker run \
+		--rm \
+		--volume `pwd`:/srv \
+		--tty --interactive \
+		manala/ansible-debian:jessie \
+		/bin/bash
+
 #########
 # Build #
 #########
 
 ## Build
-build: build@jessie build@wheezy
-
-## Build - Jessie
-build@jessie:
-	docker build \
-		--pull \
-		--rm \
-		--force-rm \
-		--no-cache \
-		--tag manala/ansible-debian:jessie \
-		--file Dockerfile.jessie \
-		.
+build: build@wheezy build@jessie
 
 ## Build - Wheezy
 build@wheezy:
@@ -51,39 +62,28 @@ build@wheezy:
 		--file Dockerfile.wheezy \
 		.
 
-########
-# Test #
-########
-
-## Test - Jessie
-test@jessie:
-	docker run \
+## Build - Jessie
+build@jessie:
+	docker build \
+		--pull \
 		--rm \
-		--volume `pwd`:/srv \
-		--tty -i \
-		manala/ansible-debian:jessie \
-		/bin/bash
-
-## Test - Wheezy
-test@wheezy:
-	docker run \
-		--rm \
-		--volume `pwd`:/srv \
-		--tty -i \
-		manala/ansible-debian:wheezy \
-		/bin/bash
+		--force-rm \
+		--no-cache \
+		--tag manala/ansible-debian:jessie \
+		--file Dockerfile.jessie \
+		.
 
 ########
 # Push #
 ########
 
 ## Push
-push: push@jessie push@wheezy
-
-## Push - Jessie
-push@jessie:
-	docker push manala/ansible-debian:jessie
+push: push@wheezy push@jessie
 
 ## Push - Wheezy
 push@wheezy:
 	docker push manala/ansible-debian:wheezy
+
+## Push - Jessie
+push@jessie:
+	docker push manala/ansible-debian:jessie

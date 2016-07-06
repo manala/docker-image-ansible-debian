@@ -2,21 +2,21 @@ FROM debian:wheezy
 
 MAINTAINER Manala <contact@manala.io>
 
-ENV DEBIAN_FRONTEND noninteractive
-
 WORKDIR /tmp
+
+# Apt
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install \
+        unzip \
+        make
 
 COPY scripts scripts
 
-RUN bash scripts/apt.sh \
-    && bash scripts/ansible.sh \
+RUN bash scripts/ansible.sh \
     && bash scripts/ansible-lint.sh \
     && bash scripts/goss.sh
 
-RUN apt-get -y --no-install-recommends install \
-    unzip \
-    make
-
-RUN bash scripts/clean.sh
+# Clean
+RUN rm -rf * /var/lib/apt/lists/*
 
 WORKDIR /srv

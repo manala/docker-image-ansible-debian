@@ -5,7 +5,7 @@ export DEBIAN_FRONTEND=noninteractive
 # Goss
 apt-get -y --no-install-recommends install curl ca-certificates
 
-curl -L https://github.com/aelsabbahy/goss/releases/download/v0.1.7/goss-linux-amd64 > /usr/local/bin/goss
+curl -L https://github.com/aelsabbahy/goss/releases/download/v0.1.8/goss-linux-amd64 > /usr/local/bin/goss
 chmod +rx /usr/local/bin/goss
 
 apt-get -y purge curl ca-certificates

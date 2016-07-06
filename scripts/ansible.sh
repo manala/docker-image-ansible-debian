@@ -3,8 +3,8 @@
 export DEBIAN_FRONTEND=noninteractive
 
 # Ansible
-apt-get -y --no-install-recommends install python-pip gcc python-dev libffi-dev libssl-dev
 apt-get -y --no-install-recommends install python-yaml python-crypto
+apt-get -y --no-install-recommends install python-pip gcc python-dev libffi-dev libssl-dev
 
 pip install ansible
 

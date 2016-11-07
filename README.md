@@ -2,6 +2,8 @@
 
 ## Changelog
 
+* 0.6 - Update to ansible 2.2.0.0
+      - Update to ansible-lint 3.4.3
 * 0.5 - Update to ansible 2.1.2.0
       - Update to goss 0.2.4
       - Update to ansible-lint 3.3.3

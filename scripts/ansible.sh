@@ -11,8 +11,11 @@ pip install ansible==2.2.0.0
 apt-get -y purge python-pip gcc python-dev libffi-dev libssl-dev
 apt-get -y --purge autoremove
 
+# Get debian version (wheezy,jessie,...)
+VERSION=$(cat /etc/os-release | sed -n 's/.*VERSION="[0-9] (\(.*\))"/\1/p')
+
 # Ansible - Hosts
 mkdir -p /etc/ansible
 cat <<EOF > /etc/ansible/hosts
-localhost ansible_connection=local
+$VERSION ansible_connection=local
 EOF

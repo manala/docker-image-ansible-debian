@@ -2,6 +2,8 @@
 
 ## Changelog
 
+* 0.7 - Update to ansible-lint 3.4.4
+      - Debian version instead of "localhost" in /etc/ansible/hosts
 * 0.6 - Update to ansible 2.2.0.0
       - Update to ansible-lint 3.4.3
 * 0.5 - Update to ansible 2.1.2.0

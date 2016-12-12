@@ -2,6 +2,18 @@ FROM debian:wheezy
 
 MAINTAINER Manala <contact@manala.io>
 
+# Ansible version
+ARG ANSIBLE_VERSION
+ENV ANSIBLE_VERSION ${ANSIBLE_VERSION}
+
+# Ansible lint version
+ARG ANSIBLE_LINT_VERSION
+ENV ANSIBLE_LINT_VERSION ${ANSIBLE_LINT_VERSION}
+
+# Goss version
+ARG GOSS_VERSION
+ENV GOSS_VERSION ${GOSS_VERSION}
+
 WORKDIR /tmp
 
 # Apt

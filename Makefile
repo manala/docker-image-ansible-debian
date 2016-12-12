@@ -1,6 +1,11 @@
 .SILENT:
 .PHONY: help
 
+# Versions
+ANSIBLE_VERSION      = 2.2.0.0
+ANSIBLE_LINT_VERSION = 3.4.7
+GOSS_VERSION         = 0.2.4
+
 ## Colors
 COLOR_RESET   = \033[0m
 COLOR_INFO    = \033[32m
@@ -60,6 +65,9 @@ build@wheezy:
 		--no-cache \
 		--tag manala/ansible-debian:wheezy \
 		--file Dockerfile.wheezy \
+		--build-arg ANSIBLE_VERSION=${ANSIBLE_VERSION} \
+		--build-arg ANSIBLE_LINT_VERSION=${ANSIBLE_LINT_VERSION} \
+		--build-arg GOSS_VERSION=${GOSS_VERSION} \
 		.
 
 ## Build - Jessie
@@ -71,6 +79,9 @@ build@jessie:
 		--no-cache \
 		--tag manala/ansible-debian:jessie \
 		--file Dockerfile.jessie \
+		--build-arg ANSIBLE_VERSION=${ANSIBLE_VERSION} \
+		--build-arg ANSIBLE_LINT_VERSION=${ANSIBLE_LINT_VERSION} \
+		--build-arg GOSS_VERSION=${GOSS_VERSION} \
 		.
 
 ########

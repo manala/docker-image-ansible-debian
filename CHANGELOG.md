@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.10.1] - 2016-12-12
+### Changed
+- Uncentralize versions in Makefile (as it blocks travis builds...)
+
 ## [0.10.0] - 2016-12-12
 ### Changed
 - Update to goss 0.2.5

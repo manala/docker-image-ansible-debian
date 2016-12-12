@@ -4,7 +4,7 @@
 # Versions
 ANSIBLE_VERSION      = 2.2.0.0
 ANSIBLE_LINT_VERSION = 3.4.7
-GOSS_VERSION         = 0.2.4
+GOSS_VERSION         = 0.2.5
 
 ## Colors
 COLOR_RESET   = \033[0m

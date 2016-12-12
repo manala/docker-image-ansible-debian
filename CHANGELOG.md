@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-## [0.10] - 2016-12-12
+## [0.10.0] - 2016-12-12
 ### Changed
 - Update to goss 0.2.5
 - Centralize versions in Makefile

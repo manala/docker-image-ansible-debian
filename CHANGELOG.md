@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Update to ansible-lint 3.4.8
 
 ## [0.10.1] - 2016-12-12
 ### Changed

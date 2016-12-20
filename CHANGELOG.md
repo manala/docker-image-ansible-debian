@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Changed
-- Update to ansible-lint 3.4.8
+- Update to ansible-lint 3.4.9
 
 ## [0.10.1] - 2016-12-12
 ### Changed

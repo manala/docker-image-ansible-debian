@@ -16,7 +16,8 @@ RUN apt-get update \
         wget ca-certificates less \
         apt-transport-https \
         make \
-        procps
+        procps \
+        vim
 
 COPY scripts scripts
 

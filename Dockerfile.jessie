@@ -15,7 +15,8 @@ RUN apt-get update \
         unzip \
         wget ca-certificates less \
         apt-transport-https \
-        make
+        make \
+        vim
 
 COPY scripts scripts
 

@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.11] - 2016-01-25
 ### Added
 - Install procps
+- Install vim
 
 ### Changed
 - Update to ansible 2.2.1.0

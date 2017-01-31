@@ -5,10 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [0.11.1] - 2017-01-31
 ### Added
 - Install curl (follow manala/build-debian)
 
-## [0.11] - 2016-01-25
+## [0.11.0] - 2017-01-25
 ### Added
 - Install procps
 - Install vim

@@ -3,7 +3,7 @@ FROM debian:wheezy
 MAINTAINER Manala <contact@manala.io>
 
 # Versions
-ENV ANSIBLE_VERSION      2.2.1.0
+ENV ANSIBLE_VERSION      2.2.0.0
 ENV ANSIBLE_LINT_VERSION 3.4.10
 ENV GOSS_VERSION         0.2.5
 

@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.12.0] - 2017-02-01
+### Changed
+- Downgrade to ansible 2.2.0.0 due to a blocking bug (see: https://github.com/ansible/ansible/issues/20885)
+
 ## [0.11.1] - 2017-01-31
 ### Added
 - Install curl (follow manala/build-debian)

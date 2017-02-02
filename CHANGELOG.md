@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Install goss by official install script
+- Keep python-pip package for goss tests
 
 ### Fixed
 - Curl package was first installed in Dockerfile, then, re-installed by goss script, and, finally, removed by same goss script

@@ -9,7 +9,7 @@ apt-get -y --no-install-recommends install python-pip gcc python-dev libffi-dev 
 pip install ansible==${ANSIBLE_VERSION}
 pip install -U 'jinja2<2.9'
 
-apt-get -y purge python-pip gcc python-dev libffi-dev libssl-dev
+apt-get -y purge gcc python-dev libffi-dev libssl-dev
 apt-get -y --purge autoremove
 
 # Get debian version (wheezy,jessie,...)

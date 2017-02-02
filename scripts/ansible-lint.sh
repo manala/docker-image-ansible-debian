@@ -12,6 +12,3 @@ if [ $(sed 's/\..*//' /etc/debian_version) == '8' ]; then
 fi
 
 pip install ansible-lint==${ANSIBLE_LINT_VERSION}
-
-apt-get -y purge python-pip
-apt-get -y --purge autoremove

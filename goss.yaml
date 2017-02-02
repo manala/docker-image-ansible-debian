@@ -38,7 +38,7 @@ command:
     stdout:
       - 3.4.10
   # Pip packages
-  pip list:
+  pip freeze:
     exit-status: 0
     stdout:
-      - Jinja2 (2.8.1)
+      - Jinja2==2.8.1

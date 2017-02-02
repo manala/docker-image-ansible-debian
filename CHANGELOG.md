@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [2.2.0.0-2] - 2017-02-02
+### Fixed
+- Downgrade to jinja < 2.9 to work around the jinja 2.9 gate (see: https://github.com/ansible/ansible/issues/20063)
+
+## [2.2.0.0-1] - 2017-02-01
+### Changed
+- Follow upstream versioning schema
+
 ## [0.12.0] - 2017-02-01
 ### Changed
 - Downgrade to ansible 2.2.0.0 due to a blocking bug (see: https://github.com/ansible/ansible/issues/20885)

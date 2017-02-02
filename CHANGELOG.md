@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2.2.0.0-1] - 2017-02-01
 ### Changed
-- Follow upstream versionning schema
+- Follow upstream versioning schema
 
 ## [0.12.0] - 2017-02-01
 ### Changed

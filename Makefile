@@ -73,17 +73,25 @@ build@jessie:
 		--file Dockerfile.jessie \
 		.
 
-########
-# Push #
-########
+#########
+# Test #
+#########
 
-## Push
-push: push@wheezy push@jessie
+## Test
+test: test@wheezy test@jessie
 
-## Push - Wheezy
-push@wheezy:
-	docker push manala/ansible-debian:wheezy
+## Test - Wheezy
+test@wheezy:
+	docker run \
+		--rm \
+		--volume `pwd`:/srv \
+		manala/ansible-debian:wheezy \
+		goss --gossfile /srv/goss.yaml validate
 
-## Push - Jessie
-push@jessie:
-	docker push manala/ansible-debian:jessie
+## Test - Jessie
+test@jessie:
+	docker run \
+		--rm \
+		--volume `pwd`:/srv \
+		manala/ansible-debian:jessie \
+		goss --gossfile /srv/goss.yaml validate

@@ -1,0 +1,44 @@
+############
+# Packages #
+############
+
+package:
+  unzip:
+    installed: true
+  wget:
+    installed: true
+  curl:
+    installed: true
+  ca-certificates:
+    installed: true
+  less:
+    installed: true
+  apt-transport-https:
+    installed: true
+  make:
+    installed: true
+  procps:
+    installed: true
+  vim:
+    installed: true
+
+############
+# Commands #
+############
+
+command:
+  # Ansible
+  ansible --version:
+    exit-status: 0
+    stdout:
+      - 2.2.0.0
+  # Ansible lint
+  ansible-lint --version:
+    exit-status: 0
+    stdout:
+      - 3.4.10
+  # Pip packages
+  pip list:
+    exit-status: 0
+    stdout:
+      - Jinja2 (2.8.1)

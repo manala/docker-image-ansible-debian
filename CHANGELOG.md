@@ -5,6 +5,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Tests Makefile targets
+- Travis tests
+
+### Changed
+- Install goss by official install script
+
+### Fixed
+- Curl package was first installed in Dockerfile, then, re-installed by goss script, and, finally, removed by same goss script
+
+### Removed
+- Remove "push" Makefile targets, as docker hub automatic builds are now used
 
 ## [2.2.0.0-2] - 2017-02-02
 ### Fixed
